@@ -78,7 +78,7 @@ function init(){
 		var id  = document.getElementById("Name3").value;
 		var nIvel = document.getElementById("Nivel").value;
 
-		let url2 = '/api/EjercicioAn3'
+		let url2 = '/api/PerfilAn3'
 		let settings2 = {
 			method: 'POST',
 			body: JSON.stringify({
