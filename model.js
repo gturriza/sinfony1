@@ -4,7 +4,7 @@ let bcrypt = require('bcryptjs');
 mongoose.Promise = global.Promise;
 
 
-let ejercicioSchema = mongoose.Schema({
+let perfilSchema = mongoose.Schema({
 	nombre: { type : String },
 	nivel: { type : Number },
 	tiempoInicio: {type : Number},
@@ -21,7 +21,7 @@ let ejercicioSchema = mongoose.Schema({
 // 				 required : true }
 // })
 
-let Vicepresidencia = mongoose.model( 'ejercicios', ejercicioSchema );
+let Vicepresidencia = mongoose.model( 'perfil', perfilSchema );
 // let User = mongoose.model( 'User', userSchema );
 
 // let UserList = {
@@ -107,7 +107,7 @@ let VPList = {
 		 });
 	 },
 	 postTiempoAcum: function(id, tiempoAcumulado){
-		 return Vicepresidencia.findOneAndUpdate({nombre: id}, {tiempoAcumulado: tiempoAcumulado}, (err) =>{
+		 return Vicepresidencia.findOneAndUpdate({nombre: id}, {experiencia: tiempoAcumulado}, (err) =>{
 			 if(err){
 				 throw Error(error);
 			 }
