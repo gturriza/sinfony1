@@ -1,6 +1,6 @@
 
 function init(){
-	let url = '/api/ejercicio';
+	let url = '/api/perfil';
 	let settings = {
 		method: 'GET'
 	}
