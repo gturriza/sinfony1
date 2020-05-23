@@ -62,7 +62,7 @@ app.use( morgan( "dev" ) );
 // 		});
 // });
 
-app.get( "/api/ejercicio", ( req, res, next ) => {
+app.get( "/api/perfil", ( req, res, next ) => {
 	VPList.get()
 		.then( vicepresidencia => {
 			return res.status( 200 ).json( vicepresidencia );
@@ -76,7 +76,7 @@ app.get( "/api/ejercicio", ( req, res, next ) => {
 		});
 });
 
-app.post("/api/EjercicioAn2", jsonParser, (req, res, next) =>{
+app.post("/api/PerfilAn2", jsonParser, (req, res, next) =>{
 	let tiempoFinal = req.body.tiempoFinal;
 	let id = req.body.id;
 
@@ -97,7 +97,7 @@ app.post("/api/EjercicioAn2", jsonParser, (req, res, next) =>{
 	});
 });
 
-app.post("/api/EjercicioAn3", jsonParser, (req, res, next) =>{
+app.post("/api/PerfilAn3", jsonParser, (req, res, next) =>{
 	let nivel = req.body.nivel; //Body en el apiutil de alexa
 	let id = req.body.id;
 	// let id = req.body.id;
@@ -119,8 +119,8 @@ app.post("/api/EjercicioAn3", jsonParser, (req, res, next) =>{
 		});
 })
 
-app.post("/api/EjercicioAn4", jsonParser, (req, res, next) =>{
-	let tiempoAcum = req.body.tiempoAcumulado; //Body en el apiutil de alexa
+app.post("/api/PerfilAn4", jsonParser, (req, res, next) =>{
+	let tiempoAcum = req.body.experiencia; //Body en el apiutil de alexa
 	let id = req.body.id;
 	// let id = req.body.id;
 
@@ -141,7 +141,7 @@ app.post("/api/EjercicioAn4", jsonParser, (req, res, next) =>{
 		});
 })
 
-app.post("/api/EjercicioAn5", jsonParser, (req, res, next) =>{
+app.post("/api/PerfilAn5", jsonParser, (req, res, next) =>{
 	let dAcum = req.body.diasAcum; //Body en el apiutil de alexa
 	let id = req.body.id;
 	// let id = req.body.id;
@@ -165,7 +165,7 @@ app.post("/api/EjercicioAn5", jsonParser, (req, res, next) =>{
 
 
 
-app.post( "/api/EjerecioAn", jsonParser, ( req, res, next ) => {
+app.post( "/api/PerfilAn", jsonParser, ( req, res, next ) => {
 	console.log(req.body);
 	let inicio = req.body.tiempoInicio; //Body en el apiutil de alexa
  	let id = req.body.id;
