@@ -6,11 +6,9 @@ mongoose.Promise = global.Promise;
 
 let perfilSchema = mongoose.Schema({
 	nombre: { type : String },
-	nivel: { type : Number },
-	tiempoInicio: {type : Number},
-	tiempoFinal: {type : Number},
-	tiempoAcumulado: {type : Number},
-	diasAcumulados: {type : Number}
+	fecha: { type : String },
+	nivel: {type : String},
+	experiencia: {type : String}
 });
 
 // let userSchema = mongoose.Schema({
