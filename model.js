@@ -79,24 +79,6 @@ let VPList = {
 				});
 	}
 	,
-	 postTiempoInicio : function( id, tiempoInicio ){
-		 console.log(id);
-		 return Vicepresidencia.findOneAndUpdate({nombre: id}, {tiempoInicio: tiempoInicio}, (err) => {
-			if (err) {
-				throw Error(error);
-			}
-		 });
-	 }
-	 ,
-	 postTiempoFinal: function(id, tiempoFinal){
-		console.log(id);
-		 return Vicepresidencia.findOneAndUpdate({nombre: id}, {tiempoFinal: tiempoFinal}, (err, doc) =>{
-			 if(err){
-				 throw Error(error);
-			 }
-			 return doc
-		 });
-	 }, 
 	 postNivel: function(id, nivel){
 		 return Vicepresidencia.findOneAndUpdate({nombre: id}, {nivel: nivel}, (err) =>{
 			 if(err){
@@ -104,20 +86,14 @@ let VPList = {
 			 }
 		 });
 	 },
-	 postTiempoAcum: function(id, tiempoAcumulado){
-		 return Vicepresidencia.findOneAndUpdate({nombre: id}, {experiencia: tiempoAcumulado}, (err) =>{
+	 postTiempoAcum: function(id, experi){
+		 return Vicepresidencia.findOneAndUpdate({nombre: id}, {experiencia: experi}, (err) =>{
 			 if(err){
 				 throw Error(error);
 			 }
 		 });
 	 },
-	 postDiasAcum: function(id, diasAcum){
-		 return Vicepresidencia.findOneAndUpdate({nombre: id}, {diasAcumulados: diasAcum}, (err) => {
-			 if(err){
-				 throw Error(error);
-			 }
-		 });
-	 }
+	
 };
 
 module.exports = { VPList };
