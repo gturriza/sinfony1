@@ -120,11 +120,11 @@ app.post("/api/PerfilAn3", jsonParser, (req, res, next) =>{
 })
 
 app.post("/api/PerfilAn4", jsonParser, (req, res, next) =>{
-	let tiempoAcum = req.body.experiencia; //Body en el apiutil de alexa
+	let experiencia = req.body.experiencia; //Body en el apiutil de alexa
 	let id = req.body.id;
 	// let id = req.body.id;
 
-	VPList.postTiempoAcum(id,tiempoAcum)
+	VPList.postTiempoAcum(id,experiencia)
 		.then( persona => {
 			return res.status( 201 ).json({
 				message : "Se cambio el valor",
