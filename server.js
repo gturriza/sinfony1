@@ -77,10 +77,10 @@ app.get( "/api/perfil", ( req, res, next ) => {
 });
 
 app.post("/api/PerfilAn2", jsonParser, (req, res, next) =>{
-	let tiempoFinal = req.body.tiempoFinal;
+	let satisfaccion = req.body.satisfaccion;
 	let id = req.body.id;
 
-	VPList.postTiempoFinal(id, tiempoFinal)
+	VPList.postSatisfaccion(id, satisfaccion)
 	.then( persona =>{
 		return res.status( 201 ).json({
 			message: "Se cambio el valor",
