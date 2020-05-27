@@ -8,7 +8,8 @@ let perfilSchema = mongoose.Schema({
 	nombre: { type : String },
 	fecha: { type : String },
 	nivel: {type : String},
-	experiencia: {type : String}
+	experiencia: {type : String},
+	satisfaccion: {type: String}
 });
 
 // let userSchema = mongoose.Schema({
@@ -81,6 +82,13 @@ let VPList = {
 	,
 	 postNivel: function(id, nivel){
 		 return Vicepresidencia.findOneAndUpdate({nombre: id}, {nivel: nivel}, (err) =>{
+			 if(err){
+				 throw Error(error);
+			 }
+		 });
+	 },
+	postSatisfaccion: function(id, satisfac){
+		 return Vicepresidencia.findOneAndUpdate({nombre: id}, {satisfaccion: satisfac}, (err) =>{
 			 if(err){
 				 throw Error(error);
 			 }
